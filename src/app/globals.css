@@ -5,9 +5,64 @@
 @layer base {
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
-  body { @apply bg-black text-white font-inter; }
-  h1, h2, h3, h4, h5, h6 { @apply font-display font-bold; }
-  p { @apply leading-relaxed; }
-  a { @apply text-white/80 hover:text-white transition-colors; }
-  button { @apply cursor-pointer; }
+  
+  body.toggle-black-mode {
+    background-color: #000000;
+    color: #ffffff;
+  }
+  
+  body.toggle-white-mode {
+    background-color: #ffffff;
+    color: #000000;
+  }
+}
+
+body.toggle-white-mode .theme-header {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+body.toggle-white-mode .theme-text {
+  color: #000000 !important;
+}
+body.toggle-white-mode .theme-subtext {
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+body.toggle-white-mode .theme-link {
+  color: rgba(0, 0, 0, 0.7);
+}
+body.toggle-white-mode .theme-link:hover {
+  color: #000000;
+}
+body.toggle-white-mode .theme-button-toggle {
+  border-color: rgba(0, 0, 0, 0.2);
+}
+body.toggle-white-mode .theme-button-toggle:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+body.toggle-white-mode .theme-button-primary {
+  background-color: #000000;
+  color: #ffffff;
+}
+body.toggle-white-mode .theme-button-primary:hover {
+  background-color: #333333;
+}
+body.toggle-white-mode .theme-button-secondary {
+  border-color: rgba(0, 0, 0, 0.2);
+  color: #000000;
+}
+body.toggle-white-mode .theme-button-secondary:hover {
+  border-color: #000000;
+}
+body.toggle-white-mode .theme-card {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+body.toggle-white-mode .theme-card:hover {
+  border-color: rgba(0, 0, 0, 0.3);
+}
+body.toggle-white-mode .theme-icon {
+  color: #000000;
+}
+body.toggle-white-mode .theme-footer {
+  border-top-color: rgba(0, 0, 0, 0.1);
 }
